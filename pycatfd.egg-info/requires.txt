@@ -1,0 +1,4 @@
+pillow
+requests
+scikit-image
+dlib

@@ -23,7 +23,7 @@ class TrainingDataUtil:
             tar.add('training_data')
             tar.close()
         except Exception as e:
-            print e
+            print(e)
 
     @staticmethod
     def extract_training_data():

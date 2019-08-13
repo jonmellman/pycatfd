@@ -1,8 +1,8 @@
 import dlib
 import os
-from TrainingDataUtil import TrainingDataUtil
+from pycatfd.lib.TrainingDataUtil import TrainingDataUtil
 
-DATA_DIR = 'data'
+DATA_DIR = 'pycatfd/data'
 DETECTOR_SVM = os.path.join(DATA_DIR, 'detector.svm')
 PREDICTOR_DAT = os.path.join(DATA_DIR, 'predictor.dat')
 
