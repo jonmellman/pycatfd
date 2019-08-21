@@ -5,14 +5,14 @@ import cv2
 import glob
 import os
 from PIL import Image
-from lib.CatFaceLandmark import *
-from lib.Detector import Detector
+from pycatfd.lib.CatFaceLandmark import *
+from pycatfd.lib.Detector import Detector
 from skimage import io
 
 
 def main():
-    formatter = lambda prog: argparse.HelpFormatter(prog,
-                                                    max_help_position=36)
+    def formatter(prog): return argparse.HelpFormatter(prog,
+                                                       max_help_position=36)
     desc = '''
     Detects cat faces and facial landmarks
     '''
@@ -144,6 +144,7 @@ def detect(input_image, output_path, use_json, annotate_faces,
 
     if use_json:
         print(json)
+        return json
 
 
 def get_output_file(output_path, input_image, extra, ext):
@@ -223,4 +224,5 @@ def draw_line(img, shape1, shape2, color, width):
     cv2.line(img, pt1, pt2, color, width, cv2.LINE_AA)
 
 
-main()
+if __name__ == '__main__':
+    main()

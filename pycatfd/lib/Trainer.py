@@ -2,7 +2,7 @@ import dlib
 import os
 from pycatfd.lib.TrainingDataUtil import TrainingDataUtil
 
-DATA_DIR = 'pycatfd/data'
+DATA_DIR = '../pycatfd/pycatfd/data' # TODO: abs path or relative path from here?
 DETECTOR_SVM = os.path.join(DATA_DIR, 'detector.svm')
 PREDICTOR_DAT = os.path.join(DATA_DIR, 'predictor.dat')
 
